@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Sign-up form start -->
+<div class="main-container">
+  <main>
+    <div class="div-image">
+      <img class="image-decorative" src="./assets/images/illustration-sign-up-mobile.svg" alt="Decorative image">
+    </div>
+    <div class="div-colum">
+      <div class="class">
+        <div class="second-section">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        </div>
+      <!-- Opcion de creacion de lista -->
+      <!-- Lo voy a trabajar con display grid -->
+        <div class="grid-container">
+          <section> <img src="./assets/images/icon-list.svg" alt="Icon List"> </section>
+          <section> <span>Product discovery and building what matters</span> </section>
+          <section> <img src="./assets/images/icon-list.svg" alt="Icon List"> </section>
+          <section> <span>Measuring to ensure updates are a success</span> </section>
+          <section> <img src="./assets/images/icon-list.svg" alt="Icon List"> </section>
+          <section> <span> And much more!</span> </section>
+        </div>
+        <form class="div-form">
+          <section class="sect-label">
+            <label for="email-input">Email address</label>
+            <p id="message-error"></p>
+          </section>
+          <input type="email" id="email-input" required placeholder="email@company.com">
+          <p>
+            <button id="email-btn">Subscribe to monthly newsletter</button>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="div-img-desktop">
+      <img class="image-desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="image decorative">
+    </div>
+  </main>
+  
+</div>
+
+  
+  <!-- Success message start -->
+
+<div class="padre-modal">
+  <div id="modal-div">
+    <img class="icon" src="./assets/images/icon-list.svg" alt="Icon list">
+    <h2>Thanks for subscribing!</h2>
+    <p>
+      A confirmation email has been sent to <span id="user-email">ash@loremcompany.com</span>. 
+      Please open it and click the button inside to confirm your subscription.  
+    </p>
+    <p class="p-btn">
+      <button id="close-modal-btn">Dismiss message</button>
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="attribution">
+    <p>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oliver Ramirez Guerra</a>.
+    </p>
+  </div>
+</footer>
+  <script src="./index.js"></script>
+</body>
+</html>

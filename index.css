@@ -1,0 +1,323 @@
+/* Estilos generales y variables */
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+p { font-size: 16px; }
+.second-section, .grid-container, .div-form { margin: 0 2rem; }
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.main-container { height: 80vh; }
+
+main {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de la primera seccion de la pagina */
+
+.div-image { flex: 1; }
+.image-decorative { width: 100%;}
+
+.div-img-desktop { display: none; }
+.image-desktop { display: none; }
+
+
+/* Estilos para la segunda seccion de la pagina */
+
+.second-section h1 { color: var(--DarkSlateGrey); }
+
+/* Estilos para la seccion de la lista con grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+
+/* Estilos para la seccion del formulario */
+
+.div-form {
+    flex: 1;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+label {
+    /* display: block;  */
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+.div-form input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid var(--Grey);
+    border-radius: .5rem;
+    padding: 0 1.3rem;
+    margin-bottom: .6rem;
+}
+
+.div-form input:focus {
+    border: 1px solid var(--CharcoalGrey);
+    outline: none;
+    font-size: 1rem;
+}
+
+::placeholder {
+    color: var(--Grey);
+    font-size: .9rem;
+}
+
+#email-btn {
+    color: var(--White);
+    background-color: var(--DarkSlateGrey);
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    height: 3rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.sect-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#message-error {
+    display: inline;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: .4rem;
+    color: var(--Tomato);
+}
+
+/* Estilos para el modal */
+
+#modal-div {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 22px;
+/* Estilos para que sea un modal */
+    position: fixed;
+    right: 500px;
+    display: none;
+}
+
+/* Clase que sera para cuando el modal este activo */
+.modal-active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: start;
+    right: 0 !important;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+#modal-div h2{
+    font-size: 2rem; 
+    color: var(--DarkSlateGrey);
+}
+
+#user-email { font-weight: 700; }
+
+.p-btn {
+    margin: auto 0;
+    width: 100%;
+}
+
+#close-modal-btn {
+    width: 100%;
+    height: 2.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+/* Estilos para el footer */
+
+footer {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+    body { background-color: var(--CharcoalGrey); }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    main {
+        width: max-content;
+        background-color: var(--White);
+        margin: 0 auto;
+        border-radius: 2rem;
+        box-shadow: 8px 11px 38px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 8px 11px 38px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 8px 11px 38px 0px rgba(0,0,0,0.75);
+    }
+
+    .padre-modal {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .modal-active {
+        display: block;
+        margin: 0 auto;
+        position: static !important;
+        background-color: var(--White);
+        width: 400px;
+        height: 400px !important;
+        border-radius: 15px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .div-image {
+        display: none;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: 80vh;
+    }
+
+    main {
+        max-width: 80%;
+        margin: 20px 0;
+        flex-direction: row;
+    }   
+    
+    .div-form input:hover {
+        border: 1px solid hsl(235, 18%, 26%);
+    }
+
+    .div-colum {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+        flex: auto;
+    }
+
+    .class {height: 100%;}
+
+    .image-decorative { display: none; }
+
+    .div-img-desktop {
+        display: flex;
+        flex: auto;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 2%;
+        padding-left: 0;
+    }
+
+    .image-desktop {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    .class {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .modal-active {
+        width: 400px;
+        height: 450px;
+    }
+
+    footer { top: 110vh; }
+
+    .p-btn, #email-btn {
+        transition-property: background;
+        transition-duration: 1s;
+    }
+
+    .p-btn:active, #email-btn:active {
+        background: rgb(252,44,110);
+        background: linear-gradient(90deg, rgba(252,44,110,1) 0%, rgba(246,121,121,1) 39%, rgba(255,39,0,1) 100%); 
+    }
+
+    .div-colum {
+        height: min-content;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    
+     main {
+        width: 60%;
+        height: min-content;
+    }
+
+    .div-colum {
+        padding: 10px;
+    }
+
+    .div-img-desktop {
+        padding: 10px;
+        padding-left: 0;
+    }
+
+    .image-desktop {
+        height: 100%;
+    }
+}
+
+/* Estilos por defecto de Front-end mentor */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution p { font-size: smaller; }
